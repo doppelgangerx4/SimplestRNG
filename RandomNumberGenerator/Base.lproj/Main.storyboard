@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="50" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdk-aX-WJf" userLabel="diceValue">
+                                <rect key="frame" x="16" y="151.5" width="568" height="298.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="250"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsA-6Y-Gkl">
+                                <rect key="frame" x="188" y="520" width="225" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="HMY-f9-5cc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="S9P-jm-v0X"/>
+                                    <constraint firstAttribute="height" constant="60" id="oTW-Pu-DOf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="zbu-CD-kv0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="Roll dice!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollDiceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xed-P2-uRa"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd0-dv-nq3" userLabel="sidesContainer">
+                                <rect key="frame" x="236" y="28" width="128" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSR-BE-VQh" userLabel="sidesTextField">
+                                        <rect key="frame" x="10" y="10" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="WLt-aI-mO6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI2-xz-gvT" userLabel="sidesLabel">
+                                        <rect key="frame" x="78" y="15" width="41" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="KcO-Qx-gaf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="OSR-BE-VQh" secondAttribute="centerX" constant="24" id="0SU-cH-cbg"/>
+                                    <constraint firstAttribute="width" constant="128" id="Olw-lR-nmc"/>
+                                    <constraint firstAttribute="height" constant="50" id="abk-6j-T9K"/>
+                                    <constraint firstAttribute="centerY" secondItem="iI2-xz-gvT" secondAttribute="centerY" id="d8M-r2-dmw"/>
+                                    <constraint firstAttribute="centerY" secondItem="OSR-BE-VQh" secondAttribute="centerY" id="pWl-i8-eCp"/>
+                                    <constraint firstAttribute="centerX" secondItem="iI2-xz-gvT" secondAttribute="centerX" constant="-34" id="vtd-YA-PxG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zd0-dv-nq3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5ea-bG-NcK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BsA-6Y-Gkl" secondAttribute="bottom" constant="20" id="6fs-u0-hix"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xdk-aX-WJf" secondAttribute="trailing" id="7Zm-37-6qn"/>
+                            <constraint firstAttribute="centerY" secondItem="Xdk-aX-WJf" secondAttribute="centerY" id="StJ-Lm-OXg"/>
+                            <constraint firstAttribute="centerX" secondItem="BsA-6Y-Gkl" secondAttribute="centerX" id="c8F-gy-krR"/>
+                            <constraint firstItem="Xdk-aX-WJf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fe5-xZ-t0A"/>
+                            <constraint firstAttribute="centerX" secondItem="zd0-dv-nq3" secondAttribute="centerX" id="trd-bu-wqC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceValue" destination="Xdk-aX-WJf" id="KVf-PO-2D2"/>
+                        <outlet property="rollDiceButton" destination="BsA-6Y-Gkl" id="bTi-g6-cev"/>
+                        <outlet property="sidesTextField" destination="OSR-BE-VQh" id="8Sd-36-o47"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

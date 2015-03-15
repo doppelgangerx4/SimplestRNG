@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *diceValue;
+@property (weak, nonatomic) IBOutlet UITextField *sidesTextField;
+@property (weak, nonatomic) IBOutlet UIButton *rollDiceButton;
+
+@property (readwrite, atomic) NSInteger sides;
 
 @end
 
