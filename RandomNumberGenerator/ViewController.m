@@ -35,7 +35,15 @@
 - (void) textFieldDidEndEditing:(UITextField *)textField
 {
     NSString* textFieldStr = [textField text];
-    self.sides = [textFieldStr integerValue];
+    NSInteger textFieldVal = [textFieldStr integerValue];
+    if (textFieldVal > 1)
+    {
+        self.sides = textFieldVal;
+    }
+    else
+    {
+        [textField setText:[NSString stringWithFormat:@"%lu",self.sides]];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -46,7 +54,11 @@
 
 - (IBAction)rollDiceButtonTapped:(id)sender
 {
-    assert(self.sides > 0);
+    if (self.sides <= 1)
+    {
+        [self.diceValue setText:@"err"];
+        return;
+    }
     int val = (arc4random() % (uint32_t)self.sides) + 1;
     [self.diceValue setText:[NSString stringWithFormat:@"%d",val]];
     //[self.diceValue updateConstraints];

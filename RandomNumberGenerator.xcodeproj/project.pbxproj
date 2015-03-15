@@ -14,6 +14,7 @@
 		84C5BE721AB6370500DE9EA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C5BE711AB6370500DE9EA4 /* Images.xcassets */; };
 		84C5BE751AB6370500DE9EA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C5BE731AB6370500DE9EA4 /* LaunchScreen.xib */; };
 		84C5BE811AB6370500DE9EA4 /* RandomNumberGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5BE801AB6370500DE9EA4 /* RandomNumberGeneratorTests.m */; };
+		84C5BE8B1AB64F8800DE9EA4 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5BE8A1AB64F8800DE9EA4 /* dice.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		84C5BE7A1AB6370500DE9EA4 /* RandomNumberGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomNumberGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C5BE7F1AB6370500DE9EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C5BE801AB6370500DE9EA4 /* RandomNumberGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomNumberGeneratorTests.m; sourceTree = "<group>"; };
+		84C5BE8A1AB64F8800DE9EA4 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		84C5BE641AB6370500DE9EA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84C5BE8A1AB64F8800DE9EA4 /* dice.png */,
 				84C5BE651AB6370500DE9EA4 /* Info.plist */,
 				84C5BE661AB6370500DE9EA4 /* main.m */,
 			);
@@ -168,6 +171,7 @@
 				TargetAttributes = {
 					84C5BE601AB6370500DE9EA4 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = CQNW98LB7Z;
 					};
 					84C5BE791AB6370500DE9EA4 = {
 						CreatedOnToolsVersion = 6.2;
@@ -199,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C5BE8B1AB64F8800DE9EA4 /* dice.png in Resources */,
 				84C5BE701AB6370500DE9EA4 /* Main.storyboard in Resources */,
 				84C5BE751AB6370500DE9EA4 /* LaunchScreen.xib in Resources */,
 				84C5BE721AB6370500DE9EA4 /* Images.xcassets in Resources */,
@@ -345,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RandomNumberGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RandomNumberGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
